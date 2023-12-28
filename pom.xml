@@ -1,0 +1,16 @@
+[2:06 PM] Nagarjun Reddy Bhumireddy
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Build') {
+            steps {
+                dir('path/to/your/project') {
+                    script {
+                        sh 'mvn clean install'
+                    }
+                }
+            }
+        }
+    }
+}
